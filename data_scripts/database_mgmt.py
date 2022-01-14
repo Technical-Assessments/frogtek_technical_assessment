@@ -99,7 +99,7 @@ def creating_table(table_name: str):
 def sqlite_insert_df(db_name: str, table_name: str, df: pd.DataFrame):
 
     print(f"Creating Sqlite3 DB '{db_name}'...")
-    conn = sqlite3.connect(f"{db_name}.db")
+    conn = sqlite3.connect(f"./database/{db_name}.db")
     print("DB created successfully!")
 
     print(f"Inserting DF of size {df.size} into DB '{db_name}' and table '{table_name}'.This operation can take a few minutes...")

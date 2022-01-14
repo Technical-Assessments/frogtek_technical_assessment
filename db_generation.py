@@ -1,8 +1,7 @@
 import sys
 sys.path.append('/FROGTEK_TECHNICAL_ASSESSMENT')
-from src.data_wrangling import csv_to_df
-from src.database_mgmt import sqlite_insert_df
-import sqlite3
+from data_scripts.data_wrangling import csv_to_df
+from data_scripts.database_mgmt import sqlite_insert_df
 
 
 if __name__ == "__main__":

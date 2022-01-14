@@ -4,7 +4,7 @@
 - conda create --name django_env python=3.8
 - conda activate django_env 
 - pip install -r requirements.txt
-- python main.py
+- python db_generation.py
 
 
 
