@@ -4,7 +4,8 @@ import sys
 #DataBase tools
 import psycopg2
 import psycopg2.extras as extras
-
+import sqlite3
+import pandas as pd
 
 param_dic = {
     "host"      : "127.0.0.1",
@@ -92,4 +93,16 @@ def creating_table(table_name: str):
     #print(f"Closing {conn.info.dbname} database conection")
     #conn.close()
     #print("Conection closed.")
+
+
+# SQLITE3
+def sqlite_insert_df(db_name: str, table_name: str, df: pd.DataFrame):
+
+    print(f"Creating Sqlite3 DB '{db_name}'...")
+    conn = sqlite3.connect(f"{db_name}.db")
+    print("DB created successfully!")
+
+    print(f"Inserting DF of size {df.size} into DB '{db_name}' and table '{table_name}'.This operation can take a few minutes...")
+    df.to_sql(f'{table_name}', conn, if_exists='replace', index=False)
+    print("DataBase insertion finished successfully!")
 
