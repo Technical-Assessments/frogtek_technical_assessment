@@ -1,5 +1,21 @@
 # frogtek_prueba_tecnica
 
+# Installation
+- conda create --name django_env python=3.8
+- conda activate django_env 
+- pip install -r requirements.txt
+- python main.py
+
+
+
+- Install PostgreSQL locally. https://www.sqlshack.com/setting-up-a-postgresql-database-on-mac/. For mac:
+   2.1. brew install postgresql
+   2.2. brew services start postgresql
+   2.3. Configure database server:
+      2.3.1 Access postgress shell with: <strong><em>psql postgres</em></strong>
+      2.3.2 Create Role: <strong><em>CREATE ROLE snowman WITH LOGIN PASSWORD 'snowball';</em></strong>
+      2.3.3 Allow Role to create db: <strong><em>ALTER ROLE snowman CREATEDB;</em></strong>
+
 El repositorio cuenta con 3 directorios:
 - Data. Contiene un csv para desarrollar la parte 3 de Pandas/reporting (el csv generado
   está incluido en .gitignore para no subirse a github).
